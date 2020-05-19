@@ -1,0 +1,314 @@
+.post, .foods-template-default {
+  .entry-content > a {
+    display: none;
+  }
+  // hiding template default location of post meta data
+  .entry-meta {
+    display: none;
+  }
+
+  .entry-title {
+    display: none;
+  }
+
+  .entry-footer {
+    display: none;
+  }
+
+  .freewell-featured-image {
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: auto;
+    }
+  }
+
+  .post-cats {
+    list-style: none;
+    display: block;
+    min-height: 15px;
+    margin-bottom: 15px;
+    padding-left: 0;
+
+    li {
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 5px;
+      color: #b3b3b3;;
+    }
+  }
+
+  .header-date {
+    clear: both;
+    padding-top: 10px;
+    color: #b3b3b3;
+  }
+}
+
+.page-template-blog-index-template, .category, .page-template-food-index-template, .archive {
+
+  #sidebar {
+    display: block;
+  }
+
+  #content {
+    width: 100%;
+    max-width: 1400px;
+    float: none;
+    margin-top: 35px;
+    padding: 20px;
+
+    @media(max-width: 767px) {
+      padding: 0;
+    }
+
+    @media(min-width: 992px) {
+      width: 75%;
+      float: left;
+    }
+  }
+
+  #container.container {
+    width: 100% !important;;
+    max-width: 100% !important;
+  }
+
+  #content {
+    max-width: 1220px;
+    margin: auto;
+  }
+
+  .category-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1220px;
+    padding-left: 0;
+    width: 100%;
+    color: #b3b3b3 !important;
+    margin: auto;
+
+    @media(max-width: 991px) {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      width: fit-content;
+      flex-direction: column;
+      margin: auto;
+      padding-left: 0;
+    }
+
+    li {
+      max-width: 130px;
+      text-align: center;
+      margin-bottom: 10px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: gray;
+      font-size: 14px;
+
+      &:hover {
+        text-decoration: none;
+        color: $blue;
+      }
+    }
+  }
+
+  .post-title {
+    clear: both;
+  }
+
+  .post-cats {
+     li {
+       color: #b3b3b3;
+     }
+  }
+}
+
+.post-24, .category, .page-template-food-index-template, .archive  {
+
+  .post-wrapper  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+
+    @media(max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  .post-col {
+    padding: 20px;
+    //flex-basis: 33.333%;
+    max-width: 33%;
+
+    @media(min-width: 992px) {
+      padding: 40px 20px 20px 40px;
+    }
+
+
+    @media(max-width: 1199px) {
+      max-width: 50%;
+    }
+
+    @media(max-width: 767px) {
+      text-align: center;
+      margin-bottom: 40px;
+      margin-top: 40px;
+      padding: 0 15px;
+      max-width: 100%;
+    }
+  }
+  .featured-image {
+    margin-bottom: 35px;
+    overflow: hidden;
+    img {
+      width: 300px;
+      height: auto;
+      margin: auto;
+      display: block;
+    }
+  }
+
+  .read-more-link {
+    margin-top: 10px;
+  }
+
+
+  .post-cats {
+    list-style: none;
+    display: block;
+    min-height: 15px;
+    margin-bottom: 15px;
+    padding-left: 0;
+
+    li {
+      float: left;
+      margin-right: 10px;
+      font-size: 12px;
+      margin-bottom: 5px;
+
+      @media(max-width: 767px) {
+        float: none;
+      }
+    }
+  }
+
+  h3 {
+    clear: both;
+  }
+}
+
+
+.category, .single-post, .archive {
+  .category-title {
+    text-align: center;
+    color: gray !important;
+  }
+
+}
+
+.single-post, .foods-template-default {
+  #sidebar {
+    display: block;
+    margin-top: 35px;
+
+
+    @media(min-width: 992px) {
+      margin-top: 315px;
+    }
+  }
+
+  #content {
+    width: 100%;
+    max-width: 1400px;
+    float: none;
+    margin-top: 35px;
+    padding: 20px;
+
+    @media(min-width: 992px) {
+      width: 75%;
+      float: left;
+    }
+  }
+}
+
+.post-date {
+  color: #b3b3b3;
+  font-size: 14px;
+}
+
+.header-meta {
+  color: #b3b3b3;
+  position: relative;
+}
+.author-name {
+  color: #b3b3b3;
+  font-size: 14px;
+}
+
+.sfsi_widget.sfsi_shortcode_container {
+  float: none;
+  margin-top: 20px;
+  margin-bottom: -15px !important;
+}
+
+
+.center-wrap {
+  margin: auto;
+  width: 100%;
+  max-width: 1420px;
+
+  //@media(max-width: 767px) {
+  // display: block;
+  //}
+}
+
+
+.foods-template-default {
+  .template-banner {
+    background: #ced5e5;
+  }
+}
+
+.blog-audio {
+  clear: both;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  @media(max-width: 767px) {
+    position: relative;
+    top: 20px;
+    bottom: unset;
+    right: unset;
+  }
+}
+
+.archive {
+  .center-wrap {
+    margin: auto;
+    width: 100%;
+    max-width: 1420px;
+  }
+}
+
+.category-header {
+  min-height: 92px;
+  position: relative;
+  background: #f8f4f3;
+
+  .category-title {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+  }
+}

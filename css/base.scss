@@ -1,0 +1,31 @@
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Allura&display=swap');
+
+$primary-font: 'Montserrat', sans-serif;
+$secondary-font: "Libre Baskerville", serif;
+$cursive-font: anamorteeregular;
+$allura: 'Allura', cursive;
+
+
+// colors
+$teal: #033b3f;
+$blue: #a7bbd6;
+$rose: #d9a19a;
+$gold: #ebc181;
+$cream: #f5f1ec;
+$navy: #0d1c2a;
+$white: #ffffff;
+$gray: #b3b3b3;
+$green: #0d3a3e;
+
+
+body {
+  font-family: $primary-font;
+  font-size: 16px;
+}
+
+#sidebar {
+  display: none;
+}

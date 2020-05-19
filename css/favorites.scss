@@ -1,0 +1,80 @@
+.freewell-content {
+
+  .favorites-title {
+    border-bottom: 4px solid $green;
+    padding: 20px 0;
+
+    h2 {
+      padding-left: 20px;
+    }
+  }
+
+  .product-row {
+
+    .product-image {
+
+    }
+
+    .product-callout {
+      @media(max-width: 767px) {
+        text-align: center;
+      }
+        //h3 {
+        //  @media(max-width: 767px) {
+        //    text-align: center;
+        //  }
+        //}
+    }
+  }
+}
+
+.learn-more-bttn {
+  @media(max-width: 767px) {
+    display: table;
+    margin: auto;
+  }
+  .vc_btn3.vc_btn3-color-grey.vc_btn3-style-modern {
+    min-width: 200px !important;
+    border-color: #fcf9f9 !important;
+    background-color: #fcf9f9 !important;
+    color: #8e8c8c !important;
+
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+  }
+}
+
+.learn-more-bttn.gray {
+  .vc_btn3.vc_btn3-color-grey.vc_btn3-style-modern {
+    background: #646f73 !important;
+    color: white !important;
+
+
+    &:hover {
+      background: rgba(#646f73, 0.7) !important;
+      color: white !important;
+    }
+
+  }
+}
+
+
+.page-id-15 {
+  .product-callout {
+
+    p {
+      font-size: 16px;
+    }
+    h3 {
+     font-family: $secondary-font;
+    }
+    h4 {
+      font-family: $primary-font;
+      margin: 15px 0;
+      color: #8e8c8c !important;
+  }
+  }
+}

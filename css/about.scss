@@ -1,0 +1,79 @@
+.about-callout-one {
+  p {
+    font-size: 14px;
+  }
+  border: 2px solid $green;
+}
+
+.gray-callout {
+  p {
+    text-align: center;
+    color: white;
+
+    &:nth-of-type(3) {
+      font-weight: bold;
+    }
+  }
+}
+
+.random-things-number {
+  position: relative;
+  top: 45px;
+  left: -37px;
+
+  @media(max-width: 767px) {
+    text-align: center;
+    left: unset;
+    top: 0;
+  }
+
+  p {
+    font-size: 60px;
+  }
+}
+
+.random-things-image {
+
+  figure.vc_figure {
+    width: 100%;
+
+    .vc_single_image-wrapper {
+      width: 100%;
+
+      img {
+        @media(max-width: 767px) {
+          display: block;
+          margin: auto;
+        }
+      }
+    }
+  }
+}
+
+.random-things-content {
+  padding: 40px;
+}
+
+.random-things-col-adj-four {
+  @media(min-width: 992px) {
+    margin-top: -225px;
+  }
+}
+
+.random-things-col-adj-five {
+  @media(min-width: 992px) {
+    margin-top: -130px;
+  }
+}
+
+.random-things-col-adj-eight {
+  @media(min-width: 992px) {
+    margin-top: -215px;
+  }
+}
+
+.random-things-col-adj-nine {
+  @media(min-width: 992px) {
+    margin-top: -215px;
+  }
+}

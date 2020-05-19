@@ -1,0 +1,500 @@
+#vc_load-inline-editor {
+  display: none;
+}
+.post-edit-link {
+  display: none;
+}
+html, body {
+  width: 100%;
+  //height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.entry-content {
+  position: relative;
+}
+
+.header {
+  display: none;
+}
+div#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#container.container {
+  width: 100% !important;
+  max-width: 1220px !important;
+
+}
+
+
+.animated-menu {
+  position: absolute;
+  opacity: 1;
+  width: 350px;
+  background: $white;
+  padding-bottom: 35px;
+  z-index: 1000;
+  bottom: 0;
+  right: 0;
+  display: none;
+
+  @media(min-width: 1220px) {
+    display: block;
+  }
+
+  .up-arrow {
+    float: right;
+    transform: translateY(-25px);
+    cursor: pointer;
+
+    .fa-arrow-alt-circle-up {
+      font-size: 60px;
+      color: $rose;
+    }
+  }
+
+  h3 {
+    color: black;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    margin-left: 40px;
+    border-bottom: 1px solid $rose;
+    margin-right: 40px;
+    padding: 40px 10px 15px 0;
+    font-family: $secondary-font;
+  }
+
+  .left-side, .right-side {
+    width: 50%;
+    float: left;
+
+    ul {
+      list-style: none;
+
+      li {
+        margin-bottom: 10px;
+
+        a {
+          color: black;
+
+          &:hover {
+            text-decoration: none;
+            color: $navy;
+          }
+        }
+      }
+
+    }
+  }
+
+  .left-side {
+    ul {
+      padding-left: 65px;
+    }
+  }
+
+  .right-side {
+    ul {
+      padding-left: 0;
+    }
+  }
+
+}
+
+.pre-footer-author {
+
+  h3:first-of-type {
+    padding-top: 15px;
+  }
+  p {
+    max-width: 350px;
+    float: left;
+
+    img {
+      display: block;
+      margin-right: 40px;
+    }
+  }
+}
+
+.pre-footer-author.desktop {
+  display: none !important;
+
+  @media(min-width: 1024px) {
+    display: flex !important;
+  }
+}
+
+.pre-footer-author.mobile {
+  display: none !important;
+
+  @media(max-width: 1023px) {
+    display: flex !important;
+  }
+
+  .wpb_single_image {
+    figure {
+      width: 100%;
+
+      .vc_single_image-wrapper {
+        width: 100%;
+
+        img {
+          @media(max-width: 767px) {
+            display: block;
+            margin: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .vc_col-sm-9 {
+
+    .vc_column-inner {
+      @media(max-width: 767px) {
+        padding-top: 0 !important;
+        margin-bottom: 35px;
+      }
+    }
+  }
+
+  p {
+    max-width: 100%;
+    float: none;
+  }
+}
+
+
+.vc_btn3.vc_btn3-color-grey.vc_btn3-style-modern {
+  border-color: #fcf9f9 !important;
+  background-color: #fcf9f9 !important;
+  color: #8e8c8c !important;
+}
+
+.vc_btn3.vc_btn3-color-grey.vc_btn3-style-modern:hover {
+  border-color: white !important;
+  background-color: white !important;
+  color: #8e8c8c !important;
+}
+
+.gray-link {
+  color: darken($gray, 15%);
+}
+
+
+.banner-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 440px;
+  margin-bottom: -65px;
+
+  @media(max-width: 480px) {
+    min-height: 500px;
+  }
+
+  .banner-one {
+    opacity: 1;
+  }
+  .banner-two {
+    opacity: 0;
+  }
+  .banner-three {
+    opacity: 0;
+  }
+
+ .slide-two-cta {
+   z-index: 5;
+ }
+}
+.home-banner {
+  width: 100%;
+  min-height: 400px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.banner-one {
+    background-repeat: no-repeat;
+    background-size: cover;
+    //visibility: hidden;
+
+  @media(max-width: 1199px) {
+    //background-position-x: -100px !important;
+  }
+
+  .wpb_column:first-of-type {
+    @media(max-width: 1199px) {
+      width: 100% !important;
+    }
+  }
+
+
+    .hero-left-box {
+      background-color: rgba($white, 0.6);
+      padding: 10px 10px 20px 20px;
+      h2 {
+        transform: rotate(-6deg);
+        margin: 0 0 5px 0;
+        display: inline-block;
+      }
+    }
+}
+
+.banner-two {
+  visibility: hidden;
+  .shadow-box {
+    padding: 10px 10px 20px 20px;
+    margin-bottom: 0;
+
+    h2 {
+      font-weight: bold;
+      margin-bottom: 15px;
+
+      @media(max-width: 991px) {
+        font-size: 26px;
+      }
+    }
+
+    p {
+      @media(min-width: 992px) {
+        font-size: 22px;
+      }
+      @media(max-width: 991px) {
+        font-size: 18px
+      }
+      @media(max-width: 767px) {
+        font-size: 18px
+      }
+    }
+  }
+
+  .vc_btn3-container.vc_btn3-inline  {
+    max-width: 260px;
+    margin: auto;
+    display: block;
+    margin-bottom: -20px;
+
+  }
+
+  .wpb_single_image {
+    img {
+      max-width: 650px;
+      width: 100%;
+    }
+  }
+
+}
+
+.banner-three {
+  width: 100%;
+  min-height: 400px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  visibility: hidden;
+
+  .vc_col-sm-6:first-of-type {
+    @media(max-width: 1199px) {
+      width: 100% !important;
+    }
+  }
+
+  .shadow-box {
+    background-color: rgba($white, 0.6);
+    padding: 10px 10px 20px 10px;
+
+    h2 {
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    p {
+      @media(min-width: 992px) {
+        font-size: 22px;
+      }
+      @media(max-width: 991px) {
+        font-size: 18px
+      }
+      @media(max-width: 767px) {
+        font-size: 18px
+      }
+    }
+  }
+
+  .banner-buttons {
+    z-index: 2;
+
+    .button-wrap {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 15px;
+
+      .one {
+        background: #5e6f74;
+      }
+      .two {
+        background: #d0d9e7;
+        @media(min-width: 574px) {
+          padding-top: 18px;
+        }
+      }
+      .three {
+        background: #e8c3bc;
+      }
+      .four {
+        background: #314250;
+      }
+    }
+    .banner-bttn {
+      padding: 7px 15px;
+      display: block;
+      width: 270px;
+      text-align: center;
+      font-size: 16px;
+      background: red;
+      color: white;
+
+      @media(max-width: 400px) {
+        font-size: 12px;
+      }
+
+      a {
+        color: white;
+        text-decoration: none !important;
+      }
+    }
+  }
+
+  .main-wrap {
+    max-width: 560px;
+    @media(max-width: 768px) {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+}
+
+.rotator-button-wrap {
+
+  .rotator-buttons {
+    width: 100%;
+    max-width: 100px;
+    position: absolute;
+    right: 15px;
+    z-index: 5;
+
+    @media(max-width: 767px) {
+      position: relative;
+      margin: auto;
+      right: unset;
+      top: -20px;
+    }
+
+    .buttons-main-wrap {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .slide-bttn {
+        width: 15px;
+        height: 15px;
+        border: 2px solid $green;
+        border-radius: 50%;
+        background: white;
+        cursor: pointer;
+      }
+      .slide-bttn.active-slide {
+        background: $green !important;
+      }
+    }
+  }
+}
+
+
+.template-banner {
+  min-height: 225px;
+  background: $green;
+  @media(max-width: 768px) {
+    min-height: 225px;
+  }
+  @media(max-width: 529px) {
+    min-height: 175px;
+  }
+
+  .vc_column-inner {
+    padding-top: 0 !important;
+  }
+
+  .template-title {
+    padding-left: 45px;
+    span.cursive-title {
+      color: white;
+      font-size: 110px;
+      width: 100%;
+      text-align: center;
+      @media(max-width: 529px) {
+        font-size: 65px;
+      }
+    }
+
+    h1 {
+      color: white;
+      font-size: 32px;
+      text-align: center;
+
+      @media(max-width: 529px) {
+        font-size: 26px;
+      }
+    }
+  }
+
+
+
+
+  .cursive-title {
+    display: inline-block;
+    letter-spacing: 10px;
+    font-size: 95px;
+    color: white;
+    font-family: $cursive-font;
+    transform: rotate(-7deg);
+    position: relative;
+    top: 15px;
+    left: -22px;
+  }
+}
+
+//#nf-form-3-cont {
+//  .nf-field {
+//    margin-bottom: 25px;
+//  }
+//}
+
+.wpcf7 {
+
+  input, textarea {
+    padding: 5px;
+  }
+
+  .wpcf7-submit {
+    padding: 10px;
+    min-width: 110px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+  }
+}
+
+
+.regular {
+ font-family: $allura !important;
+}

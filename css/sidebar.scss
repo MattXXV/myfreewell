@@ -1,0 +1,78 @@
+#sidebar {
+  width: 100%;
+  float: none;
+  margin-top: 35px;
+  padding-top: 20px;
+
+  @media(min-width: 992px) {
+    width: 25%;
+    float: right;
+    margin-top: 50px;
+  }
+
+  @media(max-width: 767px) {
+    margin-top: 0;
+  }
+
+  ul.xoxo {
+    @media(max-width: 767px) {
+      padding-left: 0;
+    }
+  }
+
+  .screen-reader-text {
+    display: none;
+  }
+
+  #searchsubmit {
+    background: $green;
+    border-color: $green;
+    color: white;
+  }
+
+  #s {
+    width: 170px;
+  }
+
+  #categories-3, #text-2 {
+    margin-top: 35px;
+
+    @media(max-width: 991px) {
+      display: table;
+      margin: auto;
+      margin-top: 35px;
+      text-align: center;
+    }
+
+    .widget-title {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      padding-left: 0;
+      list-style: none;
+      font-size: 16px;
+      color: $blue;
+      text-decoration: none;
+
+      @media(max-width: 767px) {
+        padding-left: 0;
+      }
+
+      li {
+        margin-bottom: 7px;
+
+        a {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  #search-3 {
+    @media(max-width: 991px) {
+      display: none;
+    }
+  }
+}

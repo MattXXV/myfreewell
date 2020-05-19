@@ -1,0 +1,198 @@
+#header {
+  background: $white;
+  min-height: 100px;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  .social-desktop {
+    display: block;
+    @media(max-width: 991px) {
+     display: none;
+    }
+  }
+
+  .social-mobile {
+    display: none;
+    @media(max-width: 991px) {
+      display: block;
+    }
+  }
+  .social-top-bar {
+    max-width: 100%;
+    min-height: 35px;
+    padding-right: 15px;
+    position: relative;
+    width: inherit;
+
+    .social-header-icons {
+      float: right;
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          float: left;
+          padding: 5px 0 5px 15px;
+
+          &:last-of-type {
+            padding-right: 0;
+          }
+
+          .fab {
+            display: block;
+            position: relative;
+            cursor: pointer;
+            color: $blue;
+
+            @media(min-width: 992px) {
+              opacity: 1;
+            }
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+
+          a {
+            color: $blue;
+
+            &:hover {
+              text-decoration: none;
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #menu-wrap {
+    margin: auto;
+    max-width: 100%;
+    position: relative;
+    z-index: 10000;
+
+    nav.navbar {
+      background-color: $white;
+      border: none;
+    }
+
+    .navbar-header {
+
+      .navbar-toggle {
+        //background-color: $gold;
+        border-color: $navy;
+
+        .icon-bar {
+          background-color: $navy;
+        }
+      }
+      .freewell-logo {
+        @media(max-width: 991px) {
+          width: 150px;
+          height: auto;
+          position: relative;
+          top: -20px;
+          left: -15px;
+        }
+      }
+    }
+
+    .navbar-collapse {
+      margin-top: 10px;
+      @media(max-width: 991px) {
+        //background-color: $gold;
+        background: rgba(white, 1);
+        padding: 0 0 0 0;
+        position: absolute;
+        width: 100%;
+      }
+      .navbar-nav {
+        float: right;
+        margin: 0;
+        position: relative;
+        @media(min-width: 992px) {
+          top: 20px;
+        }
+
+        #menu-primary-menu {
+
+          li {
+            float: none;
+            @media(max-width: 991px) {
+              //border-bottom: 2px solid $navy;
+              padding: 10px 0 10px 15px;
+            }
+
+            @media(min-width: 992px) {
+              float: left
+            }
+
+            &:last-of-type {
+              border-bottom: none;
+              margin-bottom: 0;
+            }
+
+
+            a {
+              text-transform: uppercase;
+              color: $navy;
+              //color: $gray;
+              font-weight: normal;
+              letter-spacing: 2px;
+
+              @media(max-width: 991px) {
+                font-size: 18px;
+              }
+
+              @media(min-width: 992px) {
+                color: $gray;
+                //font-weight: bold;
+              }
+              &:focus, &:hover {
+                background-color: transparent;
+                outline: none;
+                color: $blue;
+
+                @media(max-width: 991px) {
+                  color: $blue;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+
+
+
+
+    //mobile-menu styles
+    .navbar-collapse.in {
+      border-color: $navy;
+      margin-top: 15px;
+      .navbar-nav {
+        #menu-primary-menu {
+          li {
+            //float: none;
+          }
+        }
+      }
+    }
+  }
+
+  #search {
+    display: none;
+  }
+}
+
+.dropdown-menu>.active>a {
+  background-color: transparent;
+}
