@@ -90,13 +90,14 @@ function getFoodsMetaData() {
     $categories = wp_get_post_categories();
     $author = get_the_author_meta( 'nickname', $author_id );
     $share = do_shortcode('[DISPLAY_ULTIMATE_SOCIAL_ICONS]');
-    $time = get_field('read_time');
+    $cooktime = get_field('cook_time');
+    $preptime = get_field('prep_time');
     $audio = get_field('blog_audio');
 
     $html = '<div class="header-meta">';
     $html .= '<p>Recipe Categories:</p>';
     $html .= '<ul class="post-cats">' . $postTerms . '</ul>';
-    $html .= '<p class="header-date"><span class="s1">' . 'PREP TIME' . '</span> | <span class="s2"> COOK TIME: ' . $time . '</span> min </p>';
+    $html .= '<p class="header-date"><span class="s1">' . 'Prep: ' . $preptime . ' min' . '</span> | <span class="s2"> Cook Time: ' . $cooktime . '</span> min </p>';
     $html .= '<p>' .  $share . '</p>';
     if($audio) {
         $html .= '<div class="blog-audio"><audio controls>' . ' <source src="' . $audio . '"' . 'type="audio/mpeg"></audio></div>';

@@ -95,7 +95,7 @@ $categories = get_terms([
                             <ul class="post-cats"> <?php echo $postTerms ?></ul>
                             <h3 class="post-title"><?php the_title(); ?></h3>
                             <p class="author-name">Author: <?php echo $author; ?> </p>
-                            <p class="post-date">Prep Time:<span style="padding: 0 5px"> <?php  the_field('read_time');?> min</span></p>
+                            <p class="post-date">Prep: <?php  the_field('prep_time');?> min |<span style="padding: 0 5px">Cook Time: <?php  the_field('cook_time');?> min</span></p>
                             <div class="post-excerpt"><?php  the_field('post_excerpt');?></div>
                             <div class="read-more-link"><a href="<?php echo esc_url( get_permalink()); ?>">Read more</a></div>
                         </div>
