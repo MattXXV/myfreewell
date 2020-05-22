@@ -73,7 +73,7 @@ $categories = get_terms([
                     while($post_query->have_posts() ) {
                         $post_query->the_post();
 
-                        $author = get_the_author_meta( 'nickname', $author_id );
+//                        $author = get_the_author_meta( 'nickname', $author_id );
                         $html = '';
 
                         $cats = wp_get_post_terms( $post->ID, 'recipe', array( 'fields' => 'all' ) );
@@ -94,7 +94,6 @@ $categories = get_terms([
                             <div class="featured-image"><?php the_post_thumbnail( 'large' ); ?> </div>
                             <ul class="post-cats"> <?php echo $postTerms ?></ul>
                             <h3 class="post-title"><?php the_title(); ?></h3>
-                            <p class="author-name">Author: <?php echo $author; ?> </p>
                             <p class="post-date">Prep: <?php  the_field('prep_time');?> min |<span style="padding: 0 5px">Cook Time: <?php  the_field('cook_time');?> min</span></p>
                             <div class="post-excerpt"><?php  the_field('post_excerpt');?></div>
                             <div class="read-more-link"><a href="<?php echo esc_url( get_permalink()); ?>">Read more</a></div>

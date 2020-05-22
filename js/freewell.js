@@ -1,54 +1,33 @@
-
-console.log('freewell js loaded!!!');
-
 var pageClass = document.querySelector('body');
-function socialIconAnimation() {
-  var facebook = document.querySelector('.social-desktop .fa-facebook-f');
-  var linkedin = document.querySelector('.social-desktop .fa-linkedin-in');
-  var instagram = document.querySelector('.social-desktop .fa-instagram');
-
-  var links = document.querySelectorAll('.menu-item');
-
-
-  TweenMax.fromTo(facebook, 1, {x: 300, opacity: 1}, {x: 0, opacity: 1});
-  TweenMax.fromTo(linkedin, 1, {x: 300, opacity: 1}, {x: 0, opacity: 1, delay: 0.2});
-  TweenMax.fromTo(instagram, 1, {x: 300, opacity: 1}, {x: 0, opacity: 1, delay: 0.4});
-
-
-}
-
-// socialIconAnimation();
 
 function mobileToggleStyleAdjust() {
   var button = document.querySelector('.navbar-toggle');
 
-
-
   button.addEventListener('click', function() {
     var menuOpen = document.querySelector('.in');
     if(menuOpen) {
-      // button.style.backgroundColor = '#ebc181';
       button.style.backgroundColor = 'white';
     } else {
       button.style.backgroundColor = 'lightgray';
     }
   });
-
 }
-
 mobileToggleStyleAdjust();
 
 window.onresize = mobileToggleStyleAdjust;
 
-var upArrow = document.querySelector('.up-arrow');
+function footerMenu() {
+  var upArrow = document.querySelector('.up-arrow');
 
-if(upArrow) {
+  if(upArrow) {
 
-  upArrow.addEventListener('click', function() {
+    upArrow.addEventListener('click', function() {
 
-    gsap.to(window,  {duration: 1, scrollTo: {y: -500, offsetY: 0}});
-  });
+      gsap.to(window,  {duration: 1, scrollTo: {y: -500, offsetY: 0}});
+    });
+  }
 }
+footerMenu();
 
 function homeRotator() {
 var bannerTl = gsap.timeline({ repeat: -1 });
@@ -60,15 +39,12 @@ var slideButtons = document.querySelectorAll('.slide-bttn');
 var slideBttn1 = document.querySelector('.slide1-bttn');
 var slideBttn2 = document.querySelector('.slide2-bttn');
 var slideBttn3 = document.querySelector('.slide3-bttn');
-var sliders = ['slide-one', 'slide-two', 'slide-three'];
-var lastSlide = localStorage.getItem('freewell');
 
   function setSlideBttnActive(bttn) {
     resetSlideBttns();
     bttn.style.background = '#0d3a3e';
     bttn.classList.add('active-slide');
     bttn.style.visibility = 'visible';
-
   }
 
   setSlideBttnActive(slideBttn1);
@@ -76,11 +52,6 @@ var lastSlide = localStorage.getItem('freewell');
   function hideVisibility(slide) {
     slide.style.visibility = 'hidden';
   }
-
-  function showVisibility(slide) {
-    slide.style.visibility = 'visible';
-  }
-
 
   bannerTl.to(b1, 0.75, { opacity: 0, onStart: setSlideBttnActive, onStartParams: [slideBttn2 ] }, 12);
   bannerTl.to(b2, 0.75, { opacity: 1, visibility: 'visible' }, 12);
@@ -132,9 +103,7 @@ var lastSlide = localStorage.getItem('freewell');
       b3.style.opacity = 1;
       b3.style.visibility = 'visible';
     });
-
   })();
-
 }
 
 if(pageClass.classList.contains('page-id-11')) {
@@ -142,7 +111,6 @@ if(pageClass.classList.contains('page-id-11')) {
 }
 
 function addCategoryLinkSidebar() {
-  var sideBar = document.querySelector('#sidebar');
   var blogSidebar = document.querySelector('#categories-3 ul');
   var recipeSidebar = document.querySelector('#text-2 ul');
   var recipeIndexPage =  document.querySelector('.page-template-food-index-template ');
@@ -187,16 +155,27 @@ function addCategoryLinkSidebar() {
     item.appendChild(link);
     catList.prepend(item);
   }
-  // if(catList) {
-  //   // var host = location.hostname;
-  //
-  //   // host = host + '/' + 'myfreewell/blog/';
-  //   // console.log(host);
-  //   link.textContent = 'All';
-  //   link.setAttribute('href', host);
-  //   item.appendChild(link);
-  //   catList.prepend(item);
-  // }
 }
-
 addCategoryLinkSidebar();
+
+function addRecipePrintBttn() {
+  if(pageClass.classList.contains('foods-template-default')) {
+      var wrapper = document.querySelector('.sfsi_widget .norm_row.sfsi_wDiv');
+      var bttnContainer = document.createElement('div');
+      bttnContainer.className = 'print-button';
+      bttnContainer.setAttribute('title', 'Print recipe page.')
+      var printIcon = document.createElement('img');
+      printIcon.setAttribute('src', '/wp-content/uploads/2020/05/print-bttn.png');
+      bttnContainer.appendChild(printIcon);
+      wrapper.appendChild(bttnContainer);
+
+      bttnContainer.addEventListener('click', function () {
+        var recipe = document.querySelector('.recipe-post').innerHTML;
+        var originalContents = document.body.innerHTML;
+        document.body.innerHTML = recipe;
+        window.print();
+        document.body.innerHTML = originalContents;
+      })
+  }
+}
+addRecipePrintBttn();

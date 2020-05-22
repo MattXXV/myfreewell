@@ -8,13 +8,21 @@
 <?php ////get_template_part( 'nav', 'below-single' ); ?>
 <!--</footer>-->
 </main>
+<?php
+ $showSidebar = get_field('show_sidebar');
+?>
+
 <aside id="sidebar">
-    <?php if ( is_active_sidebar( 'recipe_sidebar' ) ) : ?>
+    <?php if ( is_active_sidebar( 'recipe_sidebar' ) && $showSidebar ) : ?>
         <div id="primary" class="widget-area">
             <ul class="xoxo">
                 <?php dynamic_sidebar( 'recipe_sidebar' ); ?>
             </ul>
         </div>
+    <script>
+        const page = document.querySelector('#content');
+        page.classList.add('sidebar-visible');
+    </script>
     <?php endif; ?>
 </aside>
 <?php get_footer(); ?>

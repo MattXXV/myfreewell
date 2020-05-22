@@ -57,7 +57,6 @@ function getPostMetaData() {
 
     $html = '<div class="header-meta">';
     $html .= '<p>Author: ' . $author . '</p>';
-    $html .= '<p>Categories:</p>';
     $html .= '<ul class="post-cats">' . returnCats() . '</ul>';
     $html .= '<p class="header-date">Posted on: <span class="s1">' . $date . '</span> | <span class="s2">' . $time . '</span> min read</p>';
     $html .= '<p>' .  $share . '</p>';
@@ -95,7 +94,6 @@ function getFoodsMetaData() {
     $audio = get_field('blog_audio');
 
     $html = '<div class="header-meta">';
-    $html .= '<p>Recipe Categories:</p>';
     $html .= '<ul class="post-cats">' . $postTerms . '</ul>';
     $html .= '<p class="header-date"><span class="s1">' . 'Prep: ' . $preptime . ' min' . '</span> | <span class="s2"> Cook Time: ' . $cooktime . '</span> min </p>';
     $html .= '<p>' .  $share . '</p>';

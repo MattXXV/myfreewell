@@ -17,6 +17,9 @@ h1, h2, h3, h4 {
   font-family: "Libre Baskerville", serif;
   margin-top: 0; }
 
+h1 {
+  line-height: 1.1; }
+
 p, a, li {
   font-size: 16px;
   margin-bottom: 10px; }
@@ -1089,33 +1092,45 @@ footer {
   .random-things-col-adj-nine {
     margin-top: -215px; } }
 
-.post .entry-content > a, .foods-template-default .entry-content > a {
+.post #content, .foods-template-default #content, .post-template-default #content {
+  width: 100%;
+  max-width: 1220px;
+  margin: auto; }
+.post #content.sidebar-visible, .foods-template-default #content.sidebar-visible, .post-template-default #content.sidebar-visible {
+  width: 100%;
+  max-width: 1400px; }
+  @media (min-width: 992px) {
+    .post #content.sidebar-visible, .foods-template-default #content.sidebar-visible, .post-template-default #content.sidebar-visible {
+      width: 75%;
+      float: left; } }
+.post .entry-content > a, .foods-template-default .entry-content > a, .post-template-default .entry-content > a {
   display: none; }
-.post .entry-meta, .foods-template-default .entry-meta {
+.post .entry-meta, .foods-template-default .entry-meta, .post-template-default .entry-meta {
   display: none; }
-.post .entry-title, .foods-template-default .entry-title {
+.post .entry-title, .foods-template-default .entry-title, .post-template-default .entry-title {
   display: none; }
-.post .entry-footer, .foods-template-default .entry-footer {
+.post .entry-footer, .foods-template-default .entry-footer, .post-template-default .entry-footer {
   display: none; }
-.post .freewell-featured-image img, .foods-template-default .freewell-featured-image img {
+.post .freewell-featured-image img, .foods-template-default .freewell-featured-image img, .post-template-default .freewell-featured-image img {
   display: block;
   max-width: 100%;
   height: auto;
   margin: auto; }
-.post .post-cats, .foods-template-default .post-cats {
+.post .post-cats, .foods-template-default .post-cats, .post-template-default .post-cats {
   list-style: none;
   display: block;
   min-height: 15px;
   margin-bottom: 15px;
   padding-left: 0; }
-  .post .post-cats li, .foods-template-default .post-cats li {
+  .post .post-cats li, .foods-template-default .post-cats li, .post-template-default .post-cats li {
     float: left;
     margin-right: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     color: #b3b3b3; }
-.post .header-date, .foods-template-default .header-date {
+    .post .post-cats li:last-of-type, .foods-template-default .post-cats li:last-of-type, .post-template-default .post-cats li:last-of-type {
+      margin-bottom: 10px !important; }
+.post .header-date, .foods-template-default .header-date, .post-template-default .header-date {
   clear: both;
-  padding-top: 10px;
   color: #b3b3b3; }
 
 .page-template-blog-index-template #sidebar, .category #sidebar, .page-template-food-index-template #sidebar, .archive #sidebar {
@@ -1124,6 +1139,7 @@ footer {
   width: 100%;
   max-width: 1400px;
   float: none;
+  margin: auto;
   margin-top: 35px;
   padding: 20px; }
   @media (max-width: 767px) {
@@ -1136,9 +1152,6 @@ footer {
 .page-template-blog-index-template #container.container, .category #container.container, .page-template-food-index-template #container.container, .archive #container.container {
   width: 100% !important;
   max-width: 100% !important; }
-.page-template-blog-index-template #content, .category #content, .page-template-food-index-template #content, .archive #content {
-  max-width: 1220px;
-  margin: auto; }
 .page-template-blog-index-template .category-list, .category .category-list, .page-template-food-index-template .category-list, .archive .category-list {
   list-style: none;
   display: flex;
@@ -1236,16 +1249,6 @@ footer {
   @media (min-width: 992px) {
     .single-post #sidebar, .foods-template-default #sidebar {
       margin-top: 315px; } }
-.single-post #content, .foods-template-default #content {
-  width: 100%;
-  max-width: 1400px;
-  float: none;
-  margin-top: 35px;
-  padding: 20px; }
-  @media (min-width: 992px) {
-    .single-post #content, .foods-template-default #content {
-      width: 75%;
-      float: left; } }
 
 .post-date {
   color: #b3b3b3;
@@ -1262,7 +1265,7 @@ footer {
 .sfsi_widget.sfsi_shortcode_container {
   float: none;
   margin-top: 20px;
-  margin-bottom: -15px !important; }
+  margin-bottom: -30px !important; }
 
 .center-wrap {
   margin: auto;
@@ -1298,6 +1301,14 @@ footer {
     top: 50%;
     transform: translate(-50%, -50%);
     left: 50%; }
+
+.print-button {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-left: 10px;
+  padding-top: 2px;
+  cursor: pointer; }
 
 .search-results #container {
   max-width: 100% !important;
