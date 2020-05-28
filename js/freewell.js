@@ -179,3 +179,20 @@ function addRecipePrintBttn() {
   }
 }
 addRecipePrintBttn();
+
+function insertBefore(newNode, existingNode) {
+  existingNode.parentNode.insertBefore(newNode, existingNode);
+}
+
+function changeCommentsPositioning() {
+  var comments = document.querySelector('#comments');
+  var prependSection = document.querySelector('.home-sec-nine');
+  if(pageClass.classList.contains('post-template-default') || pageClass.classList.contains('foods-template-default')) {
+
+    if(comments) {
+      insertBefore(comments, prependSection);
+    }
+
+  }
+}
+changeCommentsPositioning();

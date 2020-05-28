@@ -12,8 +12,8 @@
  $showSidebar = get_field('show_sidebar');
 ?>
 
-<aside id="sidebar">
     <?php if ( is_active_sidebar( 'recipe_sidebar' ) && $showSidebar ) : ?>
+<aside id="sidebar">
         <div id="primary" class="widget-area">
             <ul class="xoxo">
                 <?php dynamic_sidebar( 'recipe_sidebar' ); ?>
@@ -23,6 +23,6 @@
         const page = document.querySelector('#content');
         page.classList.add('sidebar-visible');
     </script>
-    <?php endif; ?>
 </aside>
+    <?php endif; ?>
 <?php get_footer(); ?>
