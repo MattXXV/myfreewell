@@ -183,8 +183,7 @@ function food_posttype() {
             'menu_icon'  => 'dashicons-carrot',
             'menu_position' => 4,
             'taxonomies' => array( 'Recipe' ),
-//            'exclude_from_search' => true,
-        )
+        ),
     );
 }
 

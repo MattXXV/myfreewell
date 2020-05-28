@@ -170,11 +170,12 @@ function addRecipePrintBttn() {
       wrapper.appendChild(bttnContainer);
 
       bttnContainer.addEventListener('click', function () {
-        var recipe = document.querySelector('.recipe-post').innerHTML;
+        var recipe = document.querySelector('.recipe-content').innerHTML;
         var originalContents = document.body.innerHTML;
         document.body.innerHTML = recipe;
         window.print();
         document.body.innerHTML = originalContents;
+        footerMenu();
       })
   }
 }
