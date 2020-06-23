@@ -134,7 +134,6 @@ function returnCats() {
 //        echo $postcat;
        $html .= '<li>' . $catname . '</li>';
     }
-
     return $html;
 }
 
@@ -157,7 +156,7 @@ function freewell_footer_menu($atts = array()) {
     $html .= '<div class="up-arrow"><i class="far fa-arrow-alt-circle-up"></i></div>';
     $html .= '<h3>Get Around</h3>';
     $html .= '<div class="left-side">';
-    $html .= ' <ul>  <li><a href="https://myfreewell.com">Home</a></li> <li><a href="./about">About</a></li><li><a href="./blog">Blog</a></li> </ul>';
+    $html .= ' <ul>  <li><a href="https://myfreewell.com">Home</a></li> <li><a href="./mystory">About</a></li><li><a href="./blog">Blog</a></li> </ul>';
     $html .= '</div>';
     $html .= '<div class="right-side">';
     $html .= '<ul><li><a href="./shop">Shop</a></li> <li><a href="./recipe">Food</a></li> <li><a href="./favorites">Favorites</a></li> <li><a href="./contact">Contact</a></li></ul>';
@@ -183,6 +182,7 @@ function food_posttype() {
             'menu_icon'  => 'dashicons-carrot',
             'menu_position' => 4,
             'taxonomies' => array( 'Recipe' ),
+            'supports' => array('title','editor','author','excerpt','comments','revisions')
         ),
     );
 }
