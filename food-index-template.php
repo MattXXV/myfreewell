@@ -83,12 +83,12 @@ $categories = get_terms([
                         }
 
                         $postTerms = $html;
-
-                        if($blogCount > 4) {$blogCount = 1;}
-                            if($blogCount === 4) :
-                           ?> <div class="row">
-                    <?php
-                        endif; ?>
+//
+//                        if($blogCount > 4) {$blogCount = 1;}
+//                            if($blogCount === 4) :
+//                           ?><!-- <div class="row">-->
+<!--                    --><?php
+//                        endif; ?>
 
                         <div class="post-col">
                             <div class="featured-image"><?php the_post_thumbnail( 'large' ); ?> </div>
@@ -98,11 +98,11 @@ $categories = get_terms([
                             <div class="post-excerpt"><?php  the_field('post_excerpt');?></div>
                             <div class="read-more-link"><a href="<?php echo esc_url( get_permalink()); ?>">Read more</a></div>
                         </div>
-                        <?php
-                            if($first_post === 7) :
-                                ?> </div>
-                    <?php
-                        endif;
+<!--                        --><?php
+//                            if($first_post === 7) :
+//                                ?><!-- </div>-->
+<!--                    --><?php
+//                        endif;
                         $first_post++;
                         $blogCount++;
                     }
