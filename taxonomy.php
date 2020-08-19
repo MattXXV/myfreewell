@@ -1,13 +1,12 @@
 <?php get_header(); ?>
 <div class="index-header">
-    <div data-vc-full-width="true" data-vc-full-width-init="true" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid template-banner vc_custom_1587097229184 vc_row-has-fill" style="background: #ced5e5;" >
+    <div data-vc-full-width="true" data-vc-full-width-init="true" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid template-banner vc_row-o-content-middle vc_row-flex" style="background: #ced5e5;" >
         <div class="wpb_column vc_column_container vc_col-sm-12">
             <div class="vc_column-inner">
                 <div class="wpb_wrapper">
                     <div class="wpb_text_column wpb_content_element  template-title">
                         <div class="wpb_wrapper">
-                            <p><span class="cursive-title">Welcome to</span></p>
-                            <h1>Free Well Recipes.</h1>
+                            <h1><span class="cursive-title">Recipes</span></h1>
                         </div>
                     </div>
                 </div>
@@ -29,6 +28,13 @@
 <h1 class="entry-title"><?php single_term_title(); ?></h1>
 <div class="archive-meta"><?php if ( '' != the_archive_description() ) { echo esc_html( the_archive_description() ); } ?></div>
 </header>
+
+    <a class="return-to" href="https://myfreewell.com/recipe/">
+        <div class="left-arrow">
+            <i class="far fa-arrow-alt-circle-up"></i>
+            <p>Return to Recipes</p>
+        </div>
+    </a>
     <div class="post-wrapper">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php
@@ -52,14 +58,45 @@
 <?php //get_template_part( 'nav', 'below' ); ?>
     </div>
 </main>
-<aside id="sidebar">
-    <?php if ( is_active_sidebar( 'recipe_sidebar' ) ) : ?>
-        <div id="primary" class="widget-area">
-            <ul class="xoxo">
-                <?php dynamic_sidebar( 'recipe_sidebar' ); ?>
-            </ul>
+
+</div>
+
+<div class="index-pre-foot">
+    <div class="author-bio-spot">
+        <div class="admin-img">
+            <img class="alignnone wp-image-214 size-medium" src="https://myfreewell.com/wp-content/uploads/2020/04/bio-img-229x300.jpg" alt="" width="229" height="300" srcset="https://myfreewell.com/wp-content/uploads/2020/04/bio-img-229x300.jpg 229w, https://myfreewell.com/wp-content/uploads/2020/04/bio-img.jpg 320w" sizes="(max-width: 229px) 100vw, 229px">
         </div>
-    <?php endif; ?>
-</aside>
+
+        <div class="admin-bio">
+            <h3><strong>I’m Dina</strong><br>
+                <strong>Haggenjos.</strong></h3>
+
+            <p>Research and idea expert turned Integrative Health and Nutrition Coach &amp; Educator. Helping you fulfill your own wellness, one choice at a time!</p>
+        </div>
+    </div>
+
+    <div class="footer-menu-wrap">
+        <div class="animated-menu">
+            <div class="up-arrow">
+                <i class="far fa-arrow-alt-circle-up"></i>
+            </div>
+            <h3>Get Around</h3>
+            <div class="left-side">
+                <ul>
+                    <li><a href="https://myfreewell.com">Home</a></li>
+                    <li><a href="/mystory">About</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
+            </div>
+            <div class="right-side">
+                <ul>
+                    <li><a href="/shop">Shop</a></li>
+                    <li><a href="/recipe">Food</a></li>
+                    <li><a href="/favorites">Favorites</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
 <?php get_footer(); ?>

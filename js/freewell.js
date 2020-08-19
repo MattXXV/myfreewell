@@ -197,3 +197,30 @@ function changeCommentsPositioning() {
   }
 }
 changeCommentsPositioning();
+
+
+var numbers = document.querySelectorAll('.number');
+
+if(numbers) {
+  numbers.forEach(function(number) {
+    var content = number.innerText;
+    var contentNumber = parseInt(content, 10);
+    thousands_separators(contentNumber);
+  });
+}
+
+function insertAfter(newNode, existingNode) {
+  existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
+}
+
+function adjust_search_template_dom() {
+  var body = document.querySelector('body');
+
+  if(body.classList.contains('search')) {
+    var header = document.querySelector('header');
+    var banner = document.querySelector('.template-banner');
+
+    insertAfter(banner, header);
+  }
+}
+adjust_search_template_dom();

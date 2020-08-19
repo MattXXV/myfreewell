@@ -58,6 +58,6 @@ function allowAuthorEditing() {
     add_post_type_support( 'foods', 'author' );
 //    add_post_type_support( 'foods', 'thumbnail' );
 }
-add_action('init','allowAuthorEditing');
+//add_action('init','allowAuthorEditing');
 
 flush_rewrite_rules( );

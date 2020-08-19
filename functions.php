@@ -46,7 +46,7 @@ function excludePages($query) {
     }
     return $query;
 }
-add_filter('pre_get_posts','excludePages');
+//add_filter('pre_get_posts','excludePages');
 
 require_once get_template_directory() . '/inc/foods.php';
 require_once get_template_directory() . '/inc/freewell-shortcodes.php';

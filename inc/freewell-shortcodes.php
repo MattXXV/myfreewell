@@ -104,3 +104,50 @@ function returnAllCats() {
     return $html;
 }
 add_shortcode('returnAllCats', 'returnAllCats');
+
+function getFooterPosts() {
+
+    $postType = get_post_type();
+
+    $args = array(
+        'post_type'   => $postType,
+        'post__not_in' => array( get_the_ID() ),
+        'posts_per_page' => 3,
+        'order' => 'asc'
+    );
+
+    if($postType === 'foods') {
+        $widgetTitle = 'Recent Recipes';
+    } else {
+        $widgetTitle = 'Recent Posts';
+    }
+
+
+    $previousPosts = new WP_Query($args);
+
+    $html .= '<div class="recent-posts-widget">';
+    $html .= '<h3>' . $widgetTitle . '</h3>';
+    $html .= '<div class="recent-posts-wrap">';
+
+    if($previousPosts->have_posts()) {
+        while($previousPosts->have_posts()) {
+            $previousPosts->the_post();
+
+            $thumbnail = get_the_post_thumbnail(null, 'medium');
+            $permalink = get_the_permalink();
+            $html .= '<a class="recent-post-link" href="' . $permalink . '"' . '>';
+
+            if ( has_post_thumbnail() ) {
+                $html .=  $thumbnail;
+            }
+            $html .= '<p>' . get_the_title() . '</p>';
+            $html .= '</a>';
+        }
+    };
+
+    $html .= '</div>';
+    $html .= '</div>';
+
+    return $html;
+}
+add_shortcode('getFooterPosts', 'getFooterPosts');
